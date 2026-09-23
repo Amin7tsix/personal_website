@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<section class="intro" aria-labelledby="hello">
+  <p class="eyebrow">A personal archive</p>
+  <h1 id="hello">Hello, I’m Amin.</h1>
+  <p>I’m an experimental physicist working on neutral-atom quantum computing in Munich.</p>
+  <p>This is my corner of the internet. I write about science, things I’m learning, places I go, and whatever else seems worth remembering.</p>
+</section>
+<section class="recent-writing" aria-labelledby="recent">
+  <h2 id="recent">Recent writing</h2>
+  {% if site.posts.size > 0 %}
+  <ul class="post-list">
+    {% for post in site.posts limit:4 %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %Y' }}</time></li>
+    {% endfor %}
+  </ul>
+  {% else %}<p class="metadata">Nothing here yet. Notes to come.</p>{% endif %}
+  <p class="archive-link"><a href="{{ '/writing/' | relative_url }}">All writing →</a></p>
+</section>

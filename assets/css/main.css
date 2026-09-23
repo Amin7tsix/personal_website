@@ -1,0 +1,69 @@
+/* System fonts, one reading column, no dependencies. */
+:root { color-scheme: light; --paper: #faf9f6; --ink: #292923; --muted: #69695f; --line: #deded5; --accent: #3c594a; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 19px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.site-shell { max-width: 780px; margin: 0 auto; padding: 0 32px; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.site-header, .site-footer, .eyebrow, .metadata, .post-list time, .archive-link, .back-link { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.site-header { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 36px 0 25px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.site-name { font-weight: 600; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; }
+nav { display: flex; gap: 24px; }
+nav a { text-decoration: none; }
+nav a[aria-current] { text-decoration: underline; }
+main { min-height: 55vh; padding: 65px 0 80px; overflow-wrap: break-word; }
+h1, h2, h3 { font-weight: 400; line-height: 1.2; }
+h1 { font-size: clamp(2.2rem, 5.5vw, 3.1rem); letter-spacing: -.035em; margin: 0 0 30px; }
+h2 { font-size: 1.6rem; margin: 2em 0 .8em; }
+h3 { font-size: 1.25rem; margin-top: 1.8em; }
+p, ul, ol { margin: 0 0 1.25em; }
+.eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.intro { max-width: 650px; }
+.intro .eyebrow { margin-bottom: 22px; }
+.recent-writing { margin-top: 64px; }
+.recent-writing h2 { font-size: 1.5rem; }
+.post-list { list-style: none; padding: 0; }
+.post-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+.post-list a { text-decoration: none; }
+.post-list a:hover { text-decoration: underline; }
+.post-list time { color: var(--muted); font-size: 13px; white-space: nowrap; }
+.archive-link { text-align: right; font-size: 14px; margin-top: 24px; }
+.archive-year { margin-top: 48px; }
+.archive-year h2 { color: var(--muted); font-size: 1.35rem; }
+.post-header { margin-bottom: 44px; }
+.post-header h1 { margin: 18px 0; }
+.metadata { color: var(--muted); font-size: 14px; }
+.prose > :first-child { margin-top: 0; }
+blockquote { border-left: 2px solid var(--line); margin: 32px 0; padding: 0 0 0 24px; color: var(--muted); }
+img { display: block; max-width: 100%; height: auto; margin: 32px auto; }
+figure { margin: 32px 0; }
+figure img { margin-bottom: 12px; }
+figcaption { font-size: 15px; color: var(--muted); }
+pre, code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .85em; background: #eeeee7; }
+code { padding: .15em .3em; overflow-wrap: anywhere; }
+pre { padding: 20px; overflow-x: auto; line-height: 1.6; }
+pre code { padding: 0; overflow-wrap: normal; }
+table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; font-size: .9em; }
+th, td { padding: 10px 16px; border-bottom: 1px solid var(--line); text-align: left; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+.back-link { margin: 56px 0 0; font-size: 14px; }
+.site-footer { border-top: 1px solid var(--line); padding: 24px 0 36px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; color: var(--muted); font-size: 12px; }
+.footer-links { display: flex; gap: 20px; }
+.skip-link { position: absolute; top: -100px; left: 16px; padding: 8px 16px; background: var(--paper); }
+.skip-link:focus { top: 8px; }
+@media (max-width: 540px) {
+  body { font-size: 18px; }
+  .site-shell { padding: 0 22px; }
+  .site-header { flex-direction: column; gap: 14px; padding-top: 26px; }
+  nav { gap: 26px; }
+  main { padding: 44px 0 60px; }
+  .recent-writing { margin-top: 48px; }
+  .post-list li { flex-direction: column; gap: 4px; }
+}
+@media print {
+  body { background: white; color: black; font-size: 12pt; }
+  .site-header, .site-footer, .back-link, .skip-link { display: none; }
+  .site-shell { max-width: none; padding: 0; }
+  main { padding: 0; }
+}
