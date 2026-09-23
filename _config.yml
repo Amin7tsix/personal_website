@@ -3,7 +3,7 @@ description: Experimental physics, things I am learning, and notes worth keeping
 lang: en
 timezone: Europe/Berlin
 # Set your live origin before publishing, e.g. https://USERNAME.github.io
-url: ""
+url: "https://incoherentterms.com"
 # Use "" for USERNAME.github.io or a custom domain; /REPOSITORY for a project site.
 baseurl: ""
 permalink: /writing/:title/
