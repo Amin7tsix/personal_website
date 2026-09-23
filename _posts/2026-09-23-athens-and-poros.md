@@ -1,7 +1,7 @@
 ---
 title: "One week in Greece"
 description: "Three days in Athens and three in Poros, in photographs and a few notes."
-published: false
+# published: false
 ---
 <!-- First draft. Preview with --unpublished. Remove published: false when ready. -->
 
